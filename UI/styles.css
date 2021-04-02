@@ -1,0 +1,44 @@
+button {
+  background-color: #03AFFF;
+  color: white;
+  border-radius: 7px;
+  padding: 12px;
+  text-align: center;
+}
+.center {
+  text-align: center
+}
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+input {
+  padding: 5px;
+  border: 2px solid #038BCC;
+}
+h1 {
+  color: #038BCC;
+  font-weight: 300;
+}
+h1 span {
+  font-weight: 600;
+  color: #909A9E;
+}
+h1:hover {
+  color: #03AFFF;
+}
+h1:hover span {
+  color: #73D3FF;
+}
+.bordered {
+  padding: 5px;
+  border: 2px solid #038BCC;
+}
+textarea {
+  padding: 5px;
+  border: 2px solid #038BCC;
+}

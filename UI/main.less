@@ -1,0 +1,43 @@
+@button-color: #03AFFF;
+@buttontext-color: white;
+@box-attributes: 2px solid #038BCC;
+@box-padding: 5px;
+
+button {
+	background-color: @button-color;
+	color: @buttontext-color;
+	border-radius: 7px;
+        padding: 12px;
+}
+
+input {
+	padding: @box-padding;
+	border: @box-attributes;
+}
+
+h1 {
+    color: #038BCC;
+    font-weight: 300;
+
+    span {
+        font-weight: 600;
+        color: #909A9E;
+    }
+
+    &:hover {
+        color: #03AFFF;
+    }
+
+    &:hover span {
+        color: #73D3FF;
+    }
+}
+
+.bordered {
+	padding: @box-padding;
+	border: @box-attributes;
+}
+
+textarea {
+	  .bordered();
+}

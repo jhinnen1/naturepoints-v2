@@ -1,0 +1,22 @@
+.body-custom {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.contact {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+footer {
+  text-align: center;
+}  
+
+.navbar-custom.navbar-inverse {
+    font-family: 'Open Sans', sans-serif;
+    background: #015880;
+    color: #73D3FF;
+}
+
