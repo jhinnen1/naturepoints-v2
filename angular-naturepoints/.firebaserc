@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "naturepoints-4dd9a": {
+      "hosting": {
+        "angular-naturepoints": [
+          "naturepoints-4dd9a"
+        ]
+      }
+    }
+  }
+}
