@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
