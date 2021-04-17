@@ -7,10 +7,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  private SERVER_URL = "http://localhost:3000";
+  baseURL = "http://192.168.2.195:4200";
   constructor(private httpClient: HttpClient) { }
 
   public get(){  
-		return this.httpClient.get(this.SERVER_URL);
+		return this.httpClient.get(this.baseURL + '/api/admin/users').pipe(
+      map(this.extractData),
+      catchError(this.handleError);
  }
 }
