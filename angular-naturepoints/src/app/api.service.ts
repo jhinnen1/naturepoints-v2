@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  baseURL = "http://192.168.2.195:4200";
+  baseURL = "http://192.168.2.195:8080";
   constructor(private httpClient: HttpClient) { }
 
   public get(){  
