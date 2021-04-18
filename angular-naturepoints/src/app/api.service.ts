@@ -10,7 +10,7 @@ import { throwError } from 'rxjs';
 export class ApiService {
 
   baseURL = "http://192.168.2.195:8080";
-  constructor(private httpClient: HttpClient) { }
+  constructor(public httpClient: HttpClient) { }
 
   public get(){  
 		return this.httpClient.get(this.baseURL + '/api/admin/users').pipe
@@ -26,13 +26,12 @@ private extractData(res: Response) {
 }
 private handleError(error: Response | any) {
   let errMsg: string;
-  if (error instanceof Response) {
+  if (error && error.name == 'HttpErrorResponse') {
     const err = error || '';
     errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
   } else {
-    errMsg = error.message ? error.message : error.toString();
+    errMsg = error.message ? error.message : error.statusText;
   }
-  console.error(errMsg);
   return throwError(errMsg);
 }
 }
