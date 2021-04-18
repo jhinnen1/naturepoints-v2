@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,8 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   public get(){  
-		return this.httpClient.get(this.baseURL + '/api/admin/users').pipe(
-      map(this.extractData),
+		return this.httpClient.get(this.baseURL + '/api/admin/users').pipe
+    (map(this.extractData),
       catchError(this.handleError)
     );
  }
@@ -33,6 +33,6 @@ private handleError(error: Response | any) {
     errMsg = error.message ? error.message : error.toString();
   }
   console.error(errMsg);
-  return Observable.throw(errMsg);
+  return throwError(errMsg);
 }
 }
