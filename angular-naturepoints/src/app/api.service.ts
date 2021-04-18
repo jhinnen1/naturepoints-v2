@@ -15,7 +15,8 @@ export class ApiService {
   public get(){  
 		return this.httpClient.get(this.baseURL + '/api/admin/users').pipe(
       map(this.extractData),
-      catchError(this.handleError);
+      catchError(this.handleError)
+    );
  }
 
 
